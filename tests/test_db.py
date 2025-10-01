@@ -7,7 +7,7 @@ def db_conn():
     """
     Instantiate a database wrapper object
     """
-    return db.Database()
+    return db.Database(":memory:")
 
 
 def test_connect_with_context_manager(db_conn):
