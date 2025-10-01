@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=67.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tic_tac_toe"
+version = "1.0.0"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-timeout",
+    "requests",
+    "bandit",
+    "black",
+    "flake8",
+    "isort",
+    "pylint"
+]
