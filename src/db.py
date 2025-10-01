@@ -13,7 +13,7 @@ class Database:
 
     Methods:
         connect: Get a connection object to the database
-        get_connection: Context manager alternative for getting a connection object (recommended)
+        get_connection: Get connection via context manager (recommended)
     """
 
     def __init__(self, db_path: Path = DB_PATH) -> None:
@@ -39,7 +39,8 @@ class Database:
         Yields:
             sqlite3.Connection: connection to the sqlite3 database
         Raises:
-            sqlite3.Error: If an error occurs while connecting or using the database.
+            sqlite3.Error:
+                If an error occurs while connecting or using the database.
         """
         try:
             conn = self.connect()
