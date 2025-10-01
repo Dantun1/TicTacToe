@@ -1,5 +1,6 @@
-import db
 import pytest
+
+import db
 
 
 @pytest.fixture
@@ -16,12 +17,10 @@ def test_connect_with_context_manager(db_conn):
         cursor.execute("SELECT 1;")
         assert cursor.fetchone()[0] == 1
 
+
 def test_connect_as_connection_object(db_conn):
     conn = db_conn.connect()
     cursor = conn.cursor()
     cursor.execute("SELECT 1;")
     assert cursor.fetchone()[0] == 1
     conn.close()
-
-
-

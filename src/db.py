@@ -1,10 +1,11 @@
 import sqlite3
+from contextlib import contextmanager
+from pathlib import Path
 from sqlite3 import Error
 from typing import ContextManager
-from pathlib import Path
-from contextlib import contextmanager
 
 DB_PATH = Path(__file__).parent.parent / "data" / "db.sqlite3"
+
 
 class Database:
     """
@@ -47,4 +48,3 @@ class Database:
             raise Error(f"Error interacting with database {e}")
         finally:
             conn.close()
-

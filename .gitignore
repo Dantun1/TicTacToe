@@ -1,1 +1,4 @@
 /src/tic_tac_toe.egg-info/
+.idea/
+/src/__pycache__/
+/tests/__pycache__/
