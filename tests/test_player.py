@@ -1,6 +1,7 @@
 import asyncio
 from unittest.mock import MagicMock
-from player import Player, Move
+
+from player import Move, Player
 
 
 def test_should_make_move_valid(monkeypatch):

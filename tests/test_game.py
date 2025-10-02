@@ -1,5 +1,6 @@
-from game import Game
 from unittest.mock import MagicMock
+
+from game import Game
 
 
 def test_initialize_game_with_players():
