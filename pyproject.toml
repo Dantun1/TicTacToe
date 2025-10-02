@@ -5,8 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tic_tac_toe"
 version = "1.0.0"
-dependencies = [
-]
+dependencies = []
 
 [project.optional-dependencies]
 dev = [
@@ -17,5 +16,4 @@ dev = [
     "black",
     "flake8",
     "isort",
-    "pylint"
-]
+    "pylint"]

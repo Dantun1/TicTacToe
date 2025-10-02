@@ -41,18 +41,12 @@ class Player:
         """
         while True:
             # Run input in a separate thread to avoid blocking.
-            row = await asyncio.to_thread(input,
-                                          f"{self.name}, Enter Row (1-3)"
-                                          )
-            col = await asyncio.to_thread(input,
-                                          f"{self.name}, Enter Col (1-3)"
-                                          )
+            row = await asyncio.to_thread(input, f"{self.name}, Enter Row (1-3)")
+            col = await asyncio.to_thread(input, f"{self.name}, Enter Col (1-3)")
             try:
                 row = int(row)
                 col = int(col)
                 if 1 <= row <= 3 and 1 <= col <= 3:
                     return Move(row, col)
             except ValueError:
-                print("Invalid inputs."
-                      " Please enter valid row and column from 1-3."
-                      )
+                print("Invalid inputs. Enter valid row and column from 1-3.")

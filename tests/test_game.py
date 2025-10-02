@@ -1,6 +1,7 @@
 from game import Game
 from unittest.mock import MagicMock
 
+
 def test_initialize_game_with_players():
     p1 = object()
     p2 = object()
